@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Campus Shark Tank ‐ Mentor / Alumni Panel Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb; /* Tailwind’s gray-50 */
+      color: #374151; /* Tailwind’s gray-700 */
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Header */
+    header {
+      background-color: white;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+    .header-container {
+      max-width: 1280px; /* approx Tailwind’s max-w-7xl */
+      margin: 0 auto;
+      padding: 1rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-back {
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      font-size: 1.125rem; /* text-lg */
+      font-weight: 600;
+      color: #4F46E5; /* indigo-600 */
+      cursor: pointer;
+    }
+    .btn-back:hover {
+      color: #3730A3; /* indigo-800 */
+    }
+    .btn-back i {
+      margin-right: 0.5rem;
+    }
+    .header-title {
+      font-size: 2rem; /* text-2xl */
+      font-weight: 800;
+      color: #4F46E5; /* indigo-700 */
+      margin: 0;
+    }
+
+    /* Main content */
+    main {
+      flex-grow: 1;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem; /* roughly py-10 px-4 */
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .mentor-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem; /* gap-10 */
+    }
+    @media (min-width: 640px) {
+      .mentor-grid {
+        grid-template-columns: repeat(2, 1fr); /* sm:grid-cols-2 */
+      }
+    }
+    @media (min-width: 1024px) {
+      .mentor-grid {
+        grid-template-columns: repeat(3, 1fr); /* lg:grid-cols-3 */
+      }
+    }
+
+    .mentor-article {
+      background-color: white;
+      border-radius: 0.5rem; /* rounded-lg */
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 1.5rem; /* p-6 */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .mentor-img {
+      width: 8rem; /* w-32 */
+      height: 8rem;
+      border-radius: 9999px; /* full */
+      object-fit: cover;
+      margin-bottom: 1rem; /* mb-4 */
+    }
+    .mentor-name {
+      font-size: 1.25rem; /* text-xl */
+      font-weight: 600;
+      color: #4F46E5; /* indigo-700 */
+      margin-bottom: 0.25rem; /* mb-1 */
+    }
+    .mentor-title {
+      font-style: italic;
+      color: #6366F1; /* indigo-500 */
+      margin-bottom: 0.5rem; /* mb-2 */;
+    }
+    .mentor-desc {
+      color: #374151; /* gray-700 */
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .mentor-contact {
+      margin-top: 1rem;
+      width: 100%;
+    }
+    .contact-link {
+      display: block;
+      font-weight: 600;
+      color: #4F46E5; /* indigo-600 */
+      margin-top: 0.25rem;
+    }
+    .contact-link:hover {
+      color: #3730A3; /* indigo-800 */
+    }
+
+    /* Footer */
+    footer {
+      background-color: #4F46E5; /* indigo-700 */
+      color: white;
+      padding: 1.5rem 0;
+      text-align: center;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <button onclick="goBack()" aria-label="Back to dashboard" class="btn-back">
+        <i class="fas fa-arrow-left"></i><span>Back</span>
+      </button>
+      <h1 class="header-title">Mentor / Alumni Panel Contact</h1>
+      <div></div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="mentor-grid">
+      <!-- Mentor 1 -->
+      <article class="mentor-article">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe" class="mentor-img" />
+        <h2 class="mentor-name">John Doe</h2>
+        <p class="mentor-title">Senior Software Engineer at TechCorp</p>
+        <p class="mentor-desc">
+          John has over 15 years of experience in software development, specializing in scalable web applications and mentoring startups in the tech industry.
+        </p>
+        <div class="mentor-contact">
+          <a href="tel:+1234567890" class="contact-link">📞 +1 234 567 890</a>
+          <a href="mailto:johndoe@example.com" class="contact-link">✉ johndoe@example.com</a>
+        </div>
+      </article>
+
+      <!-- Mentor 2 -->
+      <article class="mentor-article">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith" class="mentor-img" />
+        <h2 class="mentor-name">Jane Smith</h2>
+        <p class="mentor-title">Founder & CEO of GreenPack Solutions</p>
+        <p class="mentor-desc">
+          Jane is an entrepreneur focused on sustainable packaging innovations. She has successfully led multiple startups and mentors students on eco-friendly business models.
+        </p>
+        <div class="mentor-contact">
+          <a href="tel:+1987654321" class="contact-link">📞 +1 987 654 321</a>
+          <a href="mailto:janesmith@example.com" class="contact-link">✉ janesmith@example.com</a>
+        </div>
+      </article>
+
+      <!-- Mentor 3 -->
+      <article class="mentor-article">
+        <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Carlos Ramirez" class="mentor-img" />
+        <h2 class="mentor-name">Carlos Ramirez</h2>
+        <p class="mentor-title">Alumni & Product Manager at EduTech</p>
+        <p class="mentor-desc">
+          Carlos has a strong background in product management and user experience design. He actively supports student mentorship programs and startup growth.
+        </p>
+        <div class="mentor-contact">
+          <a href="tel:+11234567890" class="contact-link">📞 +1 123 456 7890</a>
+          <a href="mailto:carlosramirez@example.com" class="contact-link">✉ carlosramirez@example.com</a>
+        </div>
+      </article>
+
+      <!-- Mentor 4 -->
+      <article class="mentor-article">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Nguyen" class="mentor-img" />
+        <h2 class="mentor-name">Emily Nguyen</h2>
+        <p class="mentor-title">Sustainability Consultant at GreenFuture</p>
+        <p class="mentor-desc">
+          Emily specializes in sustainability initiatives and has helped numerous campus projects reduce their environmental impact. She mentors students passionate about green tech.
+        </p>
+        <div class="mentor-contact">
+          <a href="tel:+10987654321" class="contact-link">📞 +1 098 765 4321</a>
+          <a href="mailto:emilynguyen@example.com" class="contact-link">✉ emilynguyen@example.com</a>
+        </div>
+      </article>
+
+      <!-- Mentor 5 -->
+      <article class="mentor-article">
+        <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="David Kim" class="mentor-img" />
+        <h2 class="mentor-name">David Kim</h2>
+        <p class="mentor-title">AI Researcher at InnovateAI Labs</p>
+        <p class="mentor-desc">
+          David leads AI research projects and has extensive experience mentoring students in artificial intelligence and machine learning applications.
+        </p>
+        <div class="mentor-contact">
+          <a href="tel:+10123456789" class="contact-link">📞 +1 012 345 6789</a>
+          <a href="mailto:davidkim@example.com" class="contact-link">✉ davidkim@example.com</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © 2024 Campus Shark Tank. All rights reserved.
+  </footer>
+
+  <script>
+    function goBack() {
+      window.location.href = 'main.html';
+    }
+  </script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
