@@ -355,16 +355,15 @@
         </div>
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Discover</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#">Mentors</a></li>
             <li><a href="#">Funding</a></li>
             <li><a href="#">Resources</a></li>
           </ul>
         </nav>
         <div class="user-actions">
-          <button class="btn btn-outline">Login</button>
-          <button class="btn btn-primary">Sign Up</button>
+          <button class="btn btn-outline" onclick="goTologinPage()">Login</button>
+          <button class="btn btn-primary"  onclick="goTologinPage()">Sign Up</button>
         </div>
       </div>
     </div>
@@ -411,7 +410,7 @@
           <div class="feature-content">
             <h3>Pitch Upload</h3>
             <p>Upload your startup pitch in various formats including video, documents, and presentations to showcase your idea.</p>
-            <button class="btn btn-primary">Upload Pitch</button>
+            <button class="btn btn-primary" onclick="goToNextPage()" >Upload Pitch</button>
           </div>
         </div>
         <div class="feature-card">
@@ -421,7 +420,7 @@
           <div class="feature-content">
             <h3>Peer Feedback</h3>
             <p>Get valuable feedback from peers and provide input on other student startups through our voting system.</p>
-            <button class="btn btn-primary">Give Feedback</button>
+            <button class="btn btn-primary" onclick=" goTovotingPage()">Give Feedback</button>
           </div>
         </div>
         <div class="feature-card">
@@ -431,7 +430,7 @@
           <div class="feature-content">
             <h3>Micro-Funding</h3>
             <p>Raise small funds from peers and alumni through our secure wallet system designed for student entrepreneurs.</p>
-            <button class="btn btn-primary">Explore Funding</button>
+            <button class="btn btn-primary" onclick=" goToWalletPage()">Explore Funding</button>
           </div>
         </div>
       </div>
@@ -531,6 +530,21 @@
   </footer>
 
   <script>
+     function goTologinPage() {
+    window.location.href = 'login.html';  // change to your target page
+  }
+  function goToNextPage() {
+    window.location.href = 'pitchupload.html';  // change to your target page
+  }
+  function goTovotingPage() {
+    window.location.href = 'voting.html';  // change to your target page
+  }
+    function goToWalletPage() {
+    window.location.href = 'wallet.html';  // change to your target page
+  }
+
+
+
     // Simple interactivity for buttons
     document.addEventListener('DOMContentLoaded', function() {
       const buttons = document.querySelectorAll('.btn');
